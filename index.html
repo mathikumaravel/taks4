@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href ="style.css" />
+</head>
+<body>
+<div class="container">
+    <h2>Income & Expense Tracker</h2>
+
+    <!-- Overview -->
+    <div class="overview">
+      <div>
+        <h4>Balance</h4>
+        <p id="balance">$0.00</p>
+      </div>
+      <div>
+        <h4>Income</h4>
+        <p id="income">+$0.00</p>
+      </div>
+      <div>
+        <h4>Expense</h4>
+        <p id="expense">-$0.00</p>
+      </div>
+    </div>
+
+    <!-- Transaction Form -->
+    <form id="form">
+      <input type="text" id="description" placeholder="Description" required />
+      <input type="number" id="amount" placeholder="Amount" required />
+      <select id="type" required>
+        <option value="">Select Type</option>
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+      </select>
+      <div class="buttons">
+        <button type="submit" class="add-btn">Add</button>
+        <button type="button" class="reset-btn" id="reset">Reset</button>
+      </div>
+    </form>
+
+    <!-- Filters -->
+    <div class="filters">
+      <label><input type="radio" name="filter" value="all" checked /> All</label>
+      <label><input type="radio" name="filter" value="income" /> Income</label>
+      <label><input type="radio" name="filter" value="expense" /> Expense</label>
+    </div>
+
+    <!-- Transactions -->
+    <ul id="list"></ul>
+  </div>
+<script src="script.js"></script>
+</body>
+</html>
